@@ -5,6 +5,8 @@ const db = require("../lab7/db");
 var day1 = new Date();
 var day2 = new Date();
 
+// Здесь такие же функции как и в прошлых лабах, но реализуется все через бд
+
 router.get('/students', async(req, res) => {
     const students = await db.query("SELECT * FROM STUDENTS");
     res.json(students.rows);
