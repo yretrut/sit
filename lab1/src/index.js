@@ -1,6 +1,6 @@
 var http = require("http");
 var url = require("url");
-var days = [
+var days = [ // создание массива, в котором хранятся дни недели
   "воскресенье",
   "понедельник",
   "вторник",
@@ -10,7 +10,7 @@ var days = [
   "суббота"
 ];
 
-var server = http.createServer((req, res) => {
+var server = http.createServer((req, res) => { // вывод имени и дня недели
   var date = new Date().getDay();
   var day = days.find((item, index, array) => index === date);
   var name = url.parse(req.url, true).query;
