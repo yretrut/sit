@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-var students = [];
+var students = []; // Создание массива для хранения информации о студентах
 
 router.get('/students', (req, res) => {res.send(students);}); // Вывод всех данных о студентах
 
