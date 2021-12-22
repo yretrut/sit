@@ -3,17 +3,17 @@ const fs = require("fs");
 const path = require("path");
 const router = express.Router();
 
-
+// в этой лабе функции такие же как и в 4, только здесь данные храняться не в массиве, а в формате json-файла
 let students = [];
 
 router.get('/students', (req, res) => {
-    const jsonStudent = fs.readFileSync('student.json', 'utf-8');
-    res.send(jsonStudent);
+    const jsStudent = fs.readFileSync('student.json', 'utf-8');
+    res.send(jsStudent);
 });
 
 router.post('/students', (req, res) => {
-    const newStudent = {id, firstName, lastName, group} = req.body;
-    students.push(newStudent);
+    const addStudent = {id, firstName, lastName, group} = req.body;
+    students.push(addStudent);
     fs.writeFile('student.json', JSON.stringify(students), () => {});
 
 });
