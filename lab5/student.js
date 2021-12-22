@@ -1,6 +1,5 @@
 const express = require("express");
 const fs = require("fs");
-const path = require("path");
 const router = express.Router();
 
 // в этой лабе функции такие же как и в 4, только здесь данные храняться не в массиве, а в формате json-файла
